@@ -95,9 +95,10 @@
  *
  *
  * @package theme
- * @subpackage shoehorn
+ * @subpackage essential
  * @author G J Barnard - gjbarnard at gmail dot com and {@link http://moodle.org/user/profile.php?id=442195}
- * @author Based on code originally written by Joby Harding, Bas Brands, David Scotson and many other contributors. * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @author Based on code originally written by Joby Harding, Bas Brands, David Scotson and many other contributors. 
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 module.exports = function(grunt) {
@@ -127,77 +128,77 @@ module.exports = function(grunt) {
         less: {
             essential_p: {
                 options: {
-                    compress: false,
-                    cleancss: true,
+                    compress: true,
+                    cleancss: false,
                     paths: "./less",
                     report: 'min',
-                    sourceMap: false
+                    sourceMap: false,
                 },
                 src: 'less/essential.less',
                 dest: 'style/essential.css'
             },
             editor_p: {
                 options: {
-                    compress: false,
-                    cleancss: true,
+                    compress: true,
+                    cleancss: false,
                     paths: "./less",
                     report: 'min',
-                    sourceMap: false
+                    sourceMap: false,
                 },
                 src: 'less/editor.less',
                 dest: 'style/editor.css'
             },
             moodle_rtl_p: {
                 options: {
-                    compress: false,
-                    cleancss: true,
+                    compress: true,
+                    cleancss: false,
                     paths: "./less",
                     report: 'min',
-                    sourceMap: false
+                    sourceMap: false,
                 },
                 src: 'less/moodle-rtl.less',
                 dest: 'style/moodle-rtl.css'
             },
             essential_pix_p: {
                 options: {
-                    compress: false,
-                    cleancss: true,
+                    compress: true,
+                    cleancss: false,
                     paths: "./less",
                     report: 'min',
-                    sourceMap: false
+                    sourceMap: false,
                 },
                 src: 'less/essential-pix.less',
                 dest: 'style/essential-pix.css'
             },
             fontawesome_p: {
                 options: {
-                    compress: false,
-                    cleancss: true,
+                    compress: true,
+                    cleancss: false,
                     paths: "./less",
                     report: 'min',
-                    sourceMap: false
+                    sourceMap: false,
                 },
                 src: 'less/fontawesome.less',
                 dest: 'style/fontawesome.css'
             },
             settings_p: {
                 options: {
-                    compress: false,
-                    cleancss: true,
+                    compress: true,
+                    cleancss: false,
                     paths: "./less",
                     report: 'min',
-                    sourceMap: false
+                    sourceMap: false,
                 },
                 src: 'less/settings.less',
                 dest: 'style/settings.css'
             },
             alternative_p: {
                 options: {
-                    compress: false,
-                    cleancss: true,
+                    compress: true,
+                    cleancss: false,
                     paths: "./less",
                     report: 'min',
-                    sourceMap: false
+                    sourceMap: false,
                 },
                 src: 'less/alternative.less',
                 dest: 'style/alternative.css'

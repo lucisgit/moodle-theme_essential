@@ -133,10 +133,6 @@ function theme_essential_get_csswww() {
     $syscontext = context_system::instance();
     $itemid = theme_get_revision();
     $url = moodle_url::make_file_url("$CFG->wwwroot/pluginfile.php", "/$syscontext->id/theme_essential/style/$itemid/$moodlecss");
-    // Now this is tricky because the we can not hard code http or https here, lets use the relative link.
-    // Note: unfortunately moodle_url does not support //urls yet.
-    $url = preg_replace('|^https?://|i', '//', $url->out(false));
-
     return $url;
 }
 
