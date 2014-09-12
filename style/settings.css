@@ -500,7 +500,7 @@ input[type="color"],
 .navbar .navbar-inner .dropdown-menu > li > a:focus,
 .navbar .navbar-inner .dropdown-submenu:hover > a,
 .navbar .navbar-inner .dropdown-submenu:focus > a {
-  color: [[setting:themenavcolor]] !important;
+  color: [[setting:themenavcolor]];
   background-color: [[setting:themecolor]];
 }
 .navbar .navbar-inner .dropdown-menu {
@@ -512,16 +512,16 @@ input[type="color"],
 }
 .navbar .navbar-inner .nav > li.dropdown a:hover,
 .navbar .navbar-inner .nav > li > a:hover {
-  background-color: [[setting:themenavcolor]];
-  color: [[setting:themecolor]];
+  background-color: [[setting:themecolor]];
+  color: [[setting:themenavcolor]];
 }
 .navbar .navbar-inner .nav > li.dropdown ul.dropdown-menu > li > a {
   color: [[setting:themetextcolor]];
 }
 .navbar .navbar-inner .nav > li.dropdown ul.dropdown-menu > li > a:hover,
 .navbar .navbar-inner .nav > li.dropdown ul.dropdown-menu > li > a.open {
-  color: [[setting:themenavcolor]];
-  background-color: [[setting:themecolor]];
+  color: [[setting:themecolor]];
+  background-color: [[setting:themenavcolor]];
 }
 .navbar .navbar-inner .usermenu .dropdown img.userpicture {
   border: 1px solid [[setting:themenavcolor]];
@@ -549,11 +549,15 @@ input[type="color"],
 /* @end */
 /* @group Responsive */
 @media (max-width: 979px) {
-  .navbar-inner .nav-collapse .dropdown-menu > li > a,
-  .navbar-inner .nav-collapse .dropdown-menu > li > a:visited {
-    color: [[setting:themenavcolor]];
+  .navbar .navbar-inner .nav-collapse .nav > li.dropdown ul.dropdown-menu > li > a {
+    color: [[setting:themecolor]];
   }
-  .navbar-inner .nav-collapse .dropdown-menu {
+  .navbar .navbar-inner .nav-collapse .nav > li.dropdown ul.dropdown-menu > li > a:hover,
+  .navbar .navbar-inner .nav-collapse .nav > li.dropdown ul.dropdown-menu > li > a.open {
+    color: [[setting:themenavcolor]];
+    background-color: [[setting:themecolor]];
+  }
+  .navbar .navbar-inner .nav-collapse .nav li.dropdown ul.dropdown-menu {
     background-color: [[setting:themenavcolor]];
     color: [[setting:themecolor]];
   }

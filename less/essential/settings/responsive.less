@@ -1,16 +1,20 @@
 /* @group Responsive */
 
 @media (max-width: 979px) {
-  .navbar-inner {
-
-    .nav-collapse {
-      .dropdown-menu > li > a,
-      .dropdown-menu > li > a:visited {
-        color: ~"[[setting:themenavcolor]]";
-      }
-      .dropdown-menu {
-        background-color: ~"[[setting:themenavcolor]]";
-        color: ~"[[setting:themecolor]]";
+  .navbar {
+    .navbar-inner {
+      .nav-collapse {
+        .nav > li.dropdown ul.dropdown-menu > li > a {
+          color: ~"[[setting:themecolor]]";
+          &:hover, &.open {
+            color: ~"[[setting:themenavcolor]]";
+            background-color: ~"[[setting:themecolor]]";
+          }
+        }
+        .nav li.dropdown ul.dropdown-menu {
+          background-color: ~"[[setting:themenavcolor]]";
+          color: ~"[[setting:themecolor]]";
+        }
       }
     }
   }

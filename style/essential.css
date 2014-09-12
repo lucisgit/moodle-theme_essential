@@ -15649,6 +15649,12 @@ body .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
 .block_rss_client .footer a:hover {
   color: #fff;
 }
+/* @group Calendar Block */
+.block .minicalendar th,
+.block .minicalendar td {
+  word-break: break-word;
+}
+/* @end */
 /* @group Logged in User Block */
 .block_myprofile .content {
   padding: 5px;

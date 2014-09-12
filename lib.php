@@ -158,7 +158,7 @@ function theme_essential_pluginfile($course, $cm, $context, $filearea, $args, $f
         if ($filearea === 'logo') {
             return $theme->setting_file_serve('logo', $args, $forcedownload, $options);
         } else if ($filearea === 'style') {
-            theme_essentital_serve_css($args[1]);
+            theme_essential_serve_css($args[1]);
         } else if ($filearea === 'pagebackground') {
             return $theme->setting_file_serve('pagebackground', $args, $forcedownload, $options);
         } else if (preg_match("/slide[1-9][0-9]*image/", $filearea) !== false) {
@@ -185,7 +185,7 @@ function theme_essential_pluginfile($course, $cm, $context, $filearea, $args, $f
     }
 }
 
-function theme_essentital_serve_css($filename) {
+function theme_essential_serve_css($filename) {
     global $CFG;
     //require_once($CFG->dirroot.'/lib/csslib.php');
     if (!empty($CFG->themedir)) {
@@ -254,6 +254,7 @@ function theme_essential_send_unmodified($lastmodified, $etag) {
 }
 
 function theme_essential_send_cached_css($path, $filename, $lastmodified, $etag) {
+    global $CFG;
     require_once($CFG->dirroot.'/lib/configonlylib.php'); // For min_enable_zlib_compression().
 
     // 60 days only - the revision may get incremented quite often.
