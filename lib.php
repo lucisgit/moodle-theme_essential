@@ -201,11 +201,12 @@ function theme_essential_serve_css($filename) {
        that decision is a factor. */
 
     $etagfile = md5_file($thesheet);
-    if ($themerev <= 0) {
+    /*if ($themerev <= 0) {
         // TDM on.
         theme_essential_send_uncached_css($thestylepath, $filename, $etagfile);
     } else {
         // TDM off.
+    */
         // File.
         $lastmodified = filemtime($thesheet);
         // Header.
@@ -216,7 +217,7 @@ function theme_essential_serve_css($filename) {
             theme_essential_send_unmodified($lastmodified, $etagfile);
         }
         theme_essential_send_cached_css($thestylepath, $filename, $lastmodified, $etagfile);
-    }
+    //}
 
     //send_file($thestylepath.$filename, $filename, 20 , 0, false, false, 'text/css');
 }
@@ -782,8 +783,15 @@ function theme_essential_get_nav_links($course, $sections, $sectionno)
 {
     // FIXME: This is really evil and should by using the navigation API.
     $course = course_get_format($course)->get_course();
-    $previousarrow = '<i class="fa fa-chevron-circle-left"></i>';
-    $nextarrow = '<i class="fa fa-chevron-circle-right"></i>';
+    $left = 'left';
+    $right = 'right';
+    if (right_to_left()) {
+        $temp = $left;
+        $left = $right;
+        $right = $temp;
+    }
+    $previousarrow = '<i class="fa fa-chevron-circle-'.$left.'"></i>';
+    $nextarrow = '<i class="fa fa-chevron-circle-'.$right.'"></i>';
     $canviewhidden = has_capability('moodle/course:viewhiddensections', context_course::instance($course->id))
     or !$course->hiddensections;
 

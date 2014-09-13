@@ -34,9 +34,17 @@
     li:after {
       border-left-color: ~"[[setting:themecolor]]";
     }
-    .first {
+    li.first {
+      a:before {
+        color: ~"[[setting:themeiconcolor]]";
+      }
       a:hover:before {
         color: ~"[[setting:themecolor]]";
+      }
+      &:hover {
+        a:before {
+            color: ~"[[setting:themecolor]]";
+        }
       }
     }
     li:hover {

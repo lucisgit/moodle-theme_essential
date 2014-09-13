@@ -187,7 +187,13 @@
 .breadcrumb-nav ul.breadcrumb.style1 li:after {
   border-left-color: [[setting:themecolor]];
 }
-.breadcrumb-nav ul.breadcrumb.style1 .first a:hover:before {
+.breadcrumb-nav ul.breadcrumb.style1 li.first a:before {
+  color: [[setting:themeiconcolor]];
+}
+.breadcrumb-nav ul.breadcrumb.style1 li.first a:hover:before {
+  color: [[setting:themecolor]];
+}
+.breadcrumb-nav ul.breadcrumb.style1 li.first:hover a:before {
   color: [[setting:themecolor]];
 }
 .breadcrumb-nav ul.breadcrumb.style1 li:hover {
