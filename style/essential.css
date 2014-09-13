@@ -3057,28 +3057,6 @@ img.iconsmall {
 .path-calendar .maincalendar .eventlist .event .commands a {
   margin: 0 3px;
 }
-.dir-rtl.path-calendar .maincalendar .calendartable li {
-  padding-right: 10px;
-  padding-left: 5px;
-}
-.dir-rtl.path-calendar .maincalendar .header .buttons {
-  float: left;
-}
-.dir-rtl.path-calendar .maincalendar .eventlist .event .topic .name {
-  float: right;
-}
-.dir-rtl.path-calendar .maincalendar .eventlist .event .topic .date {
-  float: left;
-}
-.dir-rtl.path-calendar .maincalendar .eventlist .event .description .commands {
-  right: inherit;
-  left: 0;
-}
-.dir-rtl.path-calendar .maincalendar .eventlist .event .course,
-.dir-rtl.path-calendar .maincalendar .eventlist .event .subscription {
-  float: right;
-  clear: right;
-}
 #page-calendar-export .indent {
   padding-left: 20px;
 }
@@ -3123,6 +3101,7 @@ img.iconsmall {
 .block .calendar-controls .current,
 .block .calendar-controls .next {
   display: block;
+  /*@noflip*/
   float: left;
 }
 .block .calendar-controls .previous {
@@ -15808,13 +15787,13 @@ body .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
   border-top: 50px solid transparent;
   /* Go big on the size, and let overflow hide */
   border-bottom: 50px solid transparent;
-  border-left-width: 30px;
-  border-left-style: solid;
   position: absolute;
   top: 50%;
   margin-top: -50px;
   left: 100%;
   z-index: 100;
+  border-left-width: 30px;
+  border-left-style: solid;
 }
 .breadcrumb-nav ul.breadcrumb.style1 li:before {
   content: " ";
@@ -15823,13 +15802,13 @@ body .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
   height: 0;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-left: 30px solid white;
   position: absolute;
   top: 50%;
   margin-top: -50px;
-  margin-left: 1px;
   left: 100%;
   z-index: 100;
+  border-left: 30px solid white;
+  margin-left: 1px;
 }
 .breadcrumb-nav ul.breadcrumb.style1 .first {
   border-top-left-radius: 4px;
@@ -16305,13 +16284,14 @@ body .course-content ul.topics li.section .content {
   padding: 1px 8px;
 }
 body.has_dock {
-  padding-left: 40px;
+  padding-left: 42px;
 }
 body.has_dock div#dock {
   display: inline;
 }
 body.has_dock #page {
   padding-left: 20px;
+  padding-right: 20px;
 }
 body.has_dock #dock {
   position: fixed;
@@ -16506,7 +16486,15 @@ body.has_dock.empty-region-side-pre:not(.has-region-side-post) #region-bs-main-a
 body.has_dock.empty-region-side-pre.empty-region-side-post #region-bs-main-and-pre {
   width: 100%;
 }
-/* @end */
+/* @group Dock & Navbar */
+.has_dock .navbar .navbar-inner {
+  padding-left: 62px;
+}
+.has_dock .navbar.oldnavbar.affix-top .navbar-inner {
+  padding-left: 20px;
+}
+/* @end Dock & Navbar */
+/* @end Dock */
 /* @group Edit Buttons */
 i > img {
   display: none;
@@ -16711,7 +16699,8 @@ a.action-icon > i,
   background: white;
   padding: 8px;
   border-radius: 6px;
-  border: 1px solid #E1E1E1;
+  border-width: 1px;
+  border-style: solid;
   margin-top: 5px;
 }
 .performanceinfo .span3 {
@@ -16725,12 +16714,12 @@ a.action-icon > i,
 }
 .performanceinfo h2 {
   font-size: 1.4em;
-  color: #888;
   line-height: 1.4em;
   text-transform: uppercase;
   font-weight: normal;
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   margin-top: 5px;
 }
 .performanceinfo h2:before {
@@ -16740,7 +16729,6 @@ a.action-icon > i,
   content: "\f05a";
 }
 .performanceinfo span {
-  color: #444;
   display: block;
   margin-top: 5px;
 }
@@ -16748,16 +16736,24 @@ a.action-icon > i,
   font-family: FontAwesome;
   font-size: 1em;
   margin-right: .3em;
-  color: #fff;
   font-style: normal;
   font-weight: 100;
   content: "\f017";
 }
-.performanceinfo #memory:before {
+.performanceinfo #cache:before {
   font-family: FontAwesome;
   font-size: 1em;
   margin-right: .3em;
-  color: #fff;
+  font-style: normal;
+  font-weight: 100;
+  content: "\f1b0";
+}
+.performanceinfo #memory:before,
+.performanceinfo #peakmemory:before,
+.performanceinfo #session:before {
+  font-family: FontAwesome;
+  font-size: 1em;
+  margin-right: .3em;
   font-style: normal;
   content: "\f0e4";
 }
@@ -16765,15 +16761,14 @@ a.action-icon > i,
   font-family: FontAwesome;
   font-size: 1em;
   margin-right: .3em;
-  color: #fff;
   font-style: normal;
   content: "\f16c";
 }
-.performanceinfo #db:before {
+.performanceinfo #dbqueries:before,
+.performanceinfo #dbtime:before {
   font-family: FontAwesome;
   font-size: 1em;
   margin-right: .3em;
-  color: #fff;
   font-style: normal;
   content: "\f181";
 }

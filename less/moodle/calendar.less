@@ -222,46 +222,6 @@
   }
 }
 
-// RTL overrides for main calendar.
-.dir-rtl.path-calendar {
-  .maincalendar {
-    .calendartable {
-      li {
-        padding-right: 10px;
-        padding-left: 5px;
-      }
-    }
-    .header {
-      .buttons {
-        float: left;
-      }
-    }
-    .eventlist {
-      .event {
-        .topic {
-          .name {
-            float: right;
-          }
-          .date {
-            float: left;
-          }
-        }
-        .description {
-          .commands {
-            right: inherit;
-            left: 0;
-          }
-        }
-        .course,
-        .subscription {
-          float: right;
-          clear: right;
-        }
-      }
-    }
-  }
-}
-
 // Calendar export.
 #page-calendar-export {
   .indent {
@@ -314,7 +274,7 @@
     .current,
     .next {
       display: block;
-      float: left;
+      /*@noflip*/float: left;
     }
     .previous {
       text-align: left;

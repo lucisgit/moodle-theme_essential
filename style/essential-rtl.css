@@ -3739,34 +3739,6 @@ img.iconsmall {
   margin: 0 3px;
 }
 
-.dir-rtl.path-calendar .maincalendar .calendartable li {
-  padding-left: 10px;
-  padding-right: 5px;
-}
-
-.dir-rtl.path-calendar .maincalendar .header .buttons {
-  float: right;
-}
-
-.dir-rtl.path-calendar .maincalendar .eventlist .event .topic .name {
-  float: left;
-}
-
-.dir-rtl.path-calendar .maincalendar .eventlist .event .topic .date {
-  float: right;
-}
-
-.dir-rtl.path-calendar .maincalendar .eventlist .event .description .commands {
-  left: inherit;
-  right: 0;
-}
-
-.dir-rtl.path-calendar .maincalendar .eventlist .event .course,
-.dir-rtl.path-calendar .maincalendar .eventlist .event .subscription {
-  float: left;
-  clear: left;
-}
-
 #page-calendar-export .indent {
   padding-right: 20px;
 }
@@ -3819,7 +3791,8 @@ img.iconsmall {
 .block .calendar-controls .current,
 .block .calendar-controls .next {
   display: block;
-  float: right;
+  /*@noflip*/
+  float: left;
 }
 
 .block .calendar-controls .previous {
@@ -18934,13 +18907,13 @@ body .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
   border-top: 50px solid transparent;
   /* Go big on the size, and let overflow hide */
   border-bottom: 50px solid transparent;
-  border-right-width: 30px;
-  border-right-style: solid;
   position: absolute;
   top: 50%;
   margin-top: -50px;
   right: 100%;
   z-index: 100;
+  border-right-width: 30px;
+  border-right-style: solid;
 }
 
 .breadcrumb-nav ul.breadcrumb.style1 li:before {
@@ -18950,13 +18923,13 @@ body .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
   height: 0;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-right: 30px solid white;
   position: absolute;
   top: 50%;
   margin-top: -50px;
-  margin-right: 1px;
   right: 100%;
   z-index: 100;
+  border-right: 30px solid white;
+  margin-right: 1px;
 }
 
 .breadcrumb-nav ul.breadcrumb.style1 .first {
@@ -19541,7 +19514,7 @@ body .course-content ul.topics li.section .content {
 }
 
 body.has_dock {
-  padding-right: 40px;
+  padding-right: 42px;
 }
 
 body.has_dock div#dock {
@@ -19550,6 +19523,7 @@ body.has_dock div#dock {
 
 body.has_dock #page {
   padding-right: 20px;
+  padding-left: 20px;
 }
 
 body.has_dock #dock {
@@ -19784,7 +19758,19 @@ body.has_dock.empty-region-side-pre.empty-region-side-post #region-bs-main-and-p
   width: 100%;
 }
 
-/* @end */
+/* @group Dock & Navbar */
+
+.has_dock .navbar .navbar-inner {
+  padding-right: 62px;
+}
+
+.has_dock .navbar.oldnavbar.affix-top .navbar-inner {
+  padding-right: 20px;
+}
+
+/* @end Dock & Navbar */
+
+/* @end Dock */
 
 /* @group Edit Buttons */
 
@@ -20040,7 +20026,8 @@ a.action-icon > i,
   background: white;
   padding: 8px;
   border-radius: 6px;
-  border: 1px solid #E1E1E1;
+  border-width: 1px;
+  border-style: solid;
   margin-top: 5px;
 }
 
@@ -20057,12 +20044,12 @@ a.action-icon > i,
 
 .performanceinfo h2 {
   font-size: 1.4em;
-  color: #888;
   line-height: 1.4em;
   text-transform: uppercase;
   font-weight: normal;
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   margin-top: 5px;
 }
 
@@ -20074,7 +20061,6 @@ a.action-icon > i,
 }
 
 .performanceinfo span {
-  color: #444;
   display: block;
   margin-top: 5px;
 }
@@ -20083,17 +20069,26 @@ a.action-icon > i,
   font-family: FontAwesome;
   font-size: 1em;
   margin-left: .3em;
-  color: #fff;
   font-style: normal;
   font-weight: 100;
   content: "\f017";
 }
 
-.performanceinfo #memory:before {
+.performanceinfo #cache:before {
   font-family: FontAwesome;
   font-size: 1em;
   margin-left: .3em;
-  color: #fff;
+  font-style: normal;
+  font-weight: 100;
+  content: "\f1b0";
+}
+
+.performanceinfo #memory:before,
+.performanceinfo #peakmemory:before,
+.performanceinfo #session:before {
+  font-family: FontAwesome;
+  font-size: 1em;
+  margin-left: .3em;
   font-style: normal;
   content: "\f0e4";
 }
@@ -20102,16 +20097,15 @@ a.action-icon > i,
   font-family: FontAwesome;
   font-size: 1em;
   margin-left: .3em;
-  color: #fff;
   font-style: normal;
   content: "\f16c";
 }
 
-.performanceinfo #db:before {
+.performanceinfo #dbqueries:before,
+.performanceinfo #dbtime:before {
   font-family: FontAwesome;
   font-size: 1em;
   margin-left: .3em;
-  color: #fff;
   font-style: normal;
   content: "\f181";
 }

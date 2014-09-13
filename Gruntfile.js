@@ -91,7 +91,7 @@
  *                           --svgcolour=<hexcolour> Hex colour to use for SVGs
  *
  * grunt cssflip    Create essential-rtl.css by flipping the direction styles
- *                  in essential.css.
+ *                  in essential.css.  Ref: https://www.npmjs.org/package/css-flip
  *
  *
  * @package theme

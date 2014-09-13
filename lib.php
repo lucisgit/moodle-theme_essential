@@ -964,6 +964,24 @@ function theme_essential_render_slide($i)
     return $slide;
 }
 
+function theme_essential_render_slide_controls($left) {
+    $faleft = 'left';
+    $faright = 'right';
+    if (!$left) {
+        $temp = $faleft;
+        $faleft = $faright;
+        $faright = $temp;
+    }
+    $prev = '<a class="left carousel-control" href="#essentialCarousel" data-slide="prev"><i class="fa fa-chevron-circle-'.$faleft.'"></i></a>';
+    $next = '<a class="right carousel-control" href="#essentialCarousel" data-slide="next"><i class="fa fa-chevron-circle-'.$faright.'"></i></a>';
+
+    if ($left) {
+        return $prev.$next;
+    } else {
+        return $next.$prev;
+    }
+}
+
 function theme_essential_page_init(moodle_page $page)
 {
     global $CFG;
