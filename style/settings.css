@@ -450,16 +450,16 @@ input[type="color"],
 /* @end */
 /* @group Header */
 #page-header h1#title {
-  color: [[setting:themecolor]];
+  color: [[setting:themetextcolor]];
 }
 #page-header h1#smalltitle {
-  color: [[setting:themecolor]];
+  color: [[setting:themetextcolor]];
 }
 #page-header h2#subtitle {
   color: [[setting:themetextcolor]];
 }
 #page-header #headerlogo {
-  color: [[setting:themecolor]];
+  color: [[setting:themeiconcolor]];
 }
 .socials {
   margin: 0px;

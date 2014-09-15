@@ -3,36 +3,6 @@
   text-align: left;
 }
 
-// Boostrap code needed for just below.  Pulling in bootstrap/forms.less is not an option.
-// FORM ACTIONS
-// ------------
-.form-actions {
-  padding: (@baseLineHeight - 1) 20px @baseLineHeight;
-  margin-top: @baseLineHeight;
-  margin-bottom: @baseLineHeight;
-  background-color: @formActionsBackground;
-  border-top: 1px solid #e5e5e5;
-  .clearfix(); // Adding clearfix to allow for .pull-right button containers
-}
-
-.dir-rtl {
-  table#form td.submit,
-  .form-buttons,
-  .path-admin .buttons,
-  #fitem_id_submitbutton,
-  .fp-content-center form + div,
-  div.backup-section + form,
-  #fgroup_id_buttonar {
-    .form-actions;
-    padding-right: 0;
-  }
-  .path-admin .buttons,
-  .form-buttons {
-    // Add back the padding it would usually get from being inside a .form-horizontal.
-    padding-right: @horizontalComponentOffset;
-  }
-}
-
 .dir-rtl .mform .fitem .felement {
   margin-right: 30%;
   margin-left: auto;

@@ -13,6 +13,20 @@
   }
 }
 
+@media (min-width: 980px) {
+  .dir-rtl .navbar .nav.pull-right,
+  .dir-rtl .navbar .logininfo {
+    float: left;
+  }
+
+  .dir-rtl .navbar .nav {
+    float: right;
+    & > li {
+      float: right;
+    }
+  }
+}
+
 @media (min-width: 1200px) {
   .dir-rtl {
     .form-item .form-setting,

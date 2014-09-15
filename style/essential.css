@@ -1492,9 +1492,6 @@ body#page-lib-editor-tinymce-plugins-moodlemedia-preview {
   -moz-box-shadow: inset 0 0 30px 0px #cccccc;
   box-shadow: inset 0 0 30px 0px #cccccc;
 }
-.dir-rtl.jschooser .choosercontainer #chooseform .alloptions {
-  max-width: 18.3em;
-}
 /* Settings for option rows and option subtypes */
 .choosercontainer #chooseform .moduletypetitle,
 .choosercontainer #chooseform .option,
@@ -5205,9 +5202,6 @@ a.ygtvspacer:hover {
   display: inline-block;
   padding-left: 5px;
 }
-.dir-rtl .fp-select .fp-thumbnail {
-  margin: 10px 0 0 0px;
-}
 /** Message **/
 .message-discussion-noframes h1 {
   font-size: 1em;
@@ -5380,16 +5374,9 @@ table.message .searchresults td {
   padding-right: .45em;
   vertical-align: text-bottom;
 }
-.dir-rtl .messagesearchresults td img.userpicture {
-  padding-left: .45em;
-  padding-right: 0;
-}
 .messagesearchresults td span img {
   padding: 0 0 0 .45em;
   vertical-align: text-bottom;
-}
-.dir-rtl .messagesearchresults td span img {
-  padding: 0 .45em 0 0;
 }
 #newmessageoverlay {
   min-height: 20px;
@@ -12038,16 +12025,6 @@ select {
 .forumpost .row.side {
   clear: both;
 }
-.dir-rtl .forumpost .picture img.userpicture {
-  margin-left: 10px;
-  margin-right: 3px;
-}
-.dir-rtl .forumpost .row .topic,
-.dir-rtl .forumpost .row .content-mask,
-.dir-rtl .forumpost .row .options {
-  margin-left: 0;
-  margin-right: 48px;
-}
 .forumpost .row .left {
   width: 48px;
 }
@@ -14536,18 +14513,6 @@ body.has_dock div#dock {
   }
 }
 /* responsive.less */
-@media (min-width: 980px) {
-  .dir-rtl .navbar .nav.pull-right,
-  .dir-rtl .navbar .logininfo {
-    float: left;
-  }
-  .dir-rtl .navbar .nav {
-    float: right;
-  }
-  .dir-rtl .navbar .nav > li {
-    float: right;
-  }
-}
 @media (min-width: 980px) and (max-width: 1199px) {
   .form-item .form-label,
   .mform .fitem div.fitemtitle,
@@ -17218,6 +17183,7 @@ table#greyboxleft h2 {
   position: relative;
   top: 10px;
   margin-right: 10px;
+  color: [[setting:themeiconcolor]];
 }
 #page-header.oldnavbar,
 .pagelayout-maintenance #page-header,
@@ -17261,63 +17227,63 @@ button.socialicon {
 }
 button.facebook:hover,
 button.facebook:focus {
-  background: #4a6ea9;
+  background-color: #4a6ea9;
 }
 button.skype:hover,
 button.skype:focus {
-  background: #00adf7;
+  background-color: #00adf7;
 }
 button.instagram:hover,
 button.instagram:focus {
-  background: #a5674a;
+  background-color: #a5674a;
 }
 button.ios:hover,
 button.ios:focus {
-  background: #000;
+  background-color: #000;
 }
 button.windows:hover,
 button.ios:focus {
-  background: #008A00;
+  background-color: #008A00;
 }
 button.winphone:hover,
 button.ios:focus {
-  background: #9B4F96;
+  background-color: #9B4F96;
 }
 button.android:hover,
 button.android:focus {
-  background: #98cd32;
+  background-color: #98cd32;
 }
 button.vk:hover,
 button.vk:focus {
-  background: #4a6ea9;
+  background-color: #4a6ea9;
 }
 button.twitter:hover,
 button.twitter:focus {
-  background: #00aced;
+  background-color: #00aced;
 }
 button.googleplus:hover,
 button.googleplus:focus {
-  background: #f42941;
+  background-color: #f42941;
 }
 button.flickr:hover,
 button.flickr:focus {
-  background: #ff3096;
+  background-color: #ff3096;
 }
 button.instagram:hover,
 button a.instagram:focus {
-  background: #b99c6b;
+  background-color: #b99c6b;
 }
 button.youtube:hover,
 button.youtube:focus {
-  background: #f42941;
+  background-color: #f42941;
 }
 button.pinterest:hover,
 button.pinterest:focus {
-  background: #f42941;
+  background-color: #f42941;
 }
 button.linkedin:hover,
 button.linkedin:focus {
-  background: #4A9CC9;
+  background-color: #4A9CC9;
 }
 ul.socials {
   text-align: right;

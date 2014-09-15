@@ -65,11 +65,6 @@
 .dir-rtl .mdl-left {
   text-align: right;
 }
-.dir-rtl img.iconhelp,
-.dir-rtl .helplink img {
-  padding-right: 3px;
-  padding-left: 0;
-}
 .dir-rtl .accesshide {
   top: -30000px;
   left: auto;
@@ -97,6 +92,9 @@
 .dir-rtl ol {
   margin-left: 0;
   margin-right: 25px;
+}
+.dir-rtl.jschooser .choosercontainer #chooseform .alloptions {
+  max-width: 18.3em;
 }
 /** Fix YUI 2 Treeview for Right to left languages. **/
 .dir-rtl .ygtvtn {
@@ -182,14 +180,6 @@
 .dir-rtl .section .activity .actions {
   left: 0;
   right: auto;
-}
-.dir-rtl .section .activity .contentwithoutlink,
-.dir-rtl .section .activity .activityinstance {
-  padding-left: 4px;
-  padding-right: initial;
-}
-.dir-rtl.editing .section .activity.editor_displayed div.activityinstance {
-  padding-left: initial;
 }
 .dir-rtl.path-course-view .completionprogress {
   float: none;
@@ -329,71 +319,11 @@
   margin-left: 0;
   text-align: right;
 }
+.dir-rtl .fp-select .fp-thumbnail {
+  margin: 10px 0 0 0px;
+}
 .dir-rtl .form-label .form-shortname {
   text-align: left;
-}
-.form-actions {
-  padding: 19px 20px 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #e5e5e5;
-  *zoom: 1;
-}
-.form-actions:before,
-.form-actions:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.form-actions:after {
-  clear: both;
-}
-.dir-rtl table#form td.submit,
-.dir-rtl .form-buttons,
-.dir-rtl .path-admin .buttons,
-.dir-rtl #fitem_id_submitbutton,
-.dir-rtl .fp-content-center form + div,
-.dir-rtl div.backup-section + form,
-.dir-rtl #fgroup_id_buttonar {
-  padding: 19px 20px 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #e5e5e5;
-  *zoom: 1;
-  padding-right: 0;
-}
-.dir-rtl table#form td.submit:before,
-.dir-rtl .form-buttons:before,
-.dir-rtl .path-admin .buttons:before,
-.dir-rtl #fitem_id_submitbutton:before,
-.dir-rtl .fp-content-center form + div:before,
-.dir-rtl div.backup-section + form:before,
-.dir-rtl #fgroup_id_buttonar:before,
-.dir-rtl table#form td.submit:after,
-.dir-rtl .form-buttons:after,
-.dir-rtl .path-admin .buttons:after,
-.dir-rtl #fitem_id_submitbutton:after,
-.dir-rtl .fp-content-center form + div:after,
-.dir-rtl div.backup-section + form:after,
-.dir-rtl #fgroup_id_buttonar:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.dir-rtl table#form td.submit:after,
-.dir-rtl .form-buttons:after,
-.dir-rtl .path-admin .buttons:after,
-.dir-rtl #fitem_id_submitbutton:after,
-.dir-rtl .fp-content-center form + div:after,
-.dir-rtl div.backup-section + form:after,
-.dir-rtl #fgroup_id_buttonar:after {
-  clear: both;
-}
-.dir-rtl .path-admin .buttons,
-.dir-rtl .form-buttons {
-  padding-right: 180px;
 }
 .dir-rtl .mform .fitem .felement {
   margin-right: 30%;
@@ -466,21 +396,9 @@
 .dir-rtl .form-item .form-label label {
   text-align: left;
 }
-.dir-rtl .breadcrumb-button .singlebutton {
-  float: right;
-  margin-right: 4px;
-}
-.dir-rtl.path-mod-forum .forumheaderlist thead .header.lastpost {
-  text-align: left;
-}
-.dir-rtl.path-mod-forum .forumheaderlist .discussion .lastpost {
-  text-align: left;
-}
 /** Overide for RTL layout **/
 .dir-rtl #chooseqtype .instruction,
 .dir-rtl #chooseqtype .qtypesummary {
-  right: 60%;
-  left: 0%;
   border-left: 0;
   border-right: 1px solid grey;
 }
@@ -496,6 +414,18 @@
     float: none;
     text-align: right;
     margin-right: 0;
+  }
+}
+@media (min-width: 980px) {
+  .dir-rtl .navbar .nav.pull-right,
+  .dir-rtl .navbar .logininfo {
+    float: left;
+  }
+  .dir-rtl .navbar .nav {
+    float: right;
+  }
+  .dir-rtl .navbar .nav > li {
+    float: right;
   }
 }
 @media (min-width: 1200px) {
@@ -569,10 +499,6 @@
 /** Overide for RTL layout **/
 .dir-rtl .userprofilebox .descriptionbox {
   margin: 0;
-}
-.dir-rtl .userlist table#participants td,
-.dir-rtl .userlist table#participants th {
-  text-align: right;
 }
 .dir-rtl .userlist table#participants {
   margin: 0 auto;
